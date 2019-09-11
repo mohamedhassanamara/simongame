@@ -10,7 +10,7 @@ var togglePlay = false;
 var level = 0;
 
 
-$(document).keypress(function () {
+$("h1").click(function () {
     if (!togglePlay) {
         $("#level-title").text("Level "+ level);
         nextSequence();
@@ -77,7 +77,7 @@ function checkAnswer(currentLevel) {
             $("body").removeClass("game-over");
         }, 200);
 
-        $("#level-title").text("Game Over, Press Any Key to Restart");
+        $("#level-title").text("Game Over, Click Me to Restart");
         startOver();
     }
 }
